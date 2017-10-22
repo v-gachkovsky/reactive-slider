@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Reactive Slider Demo</title>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.5.4/react.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.5.4/react-dom.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.24.1/babel.min.js"></script>
+  <script type="text/babel" src="../src/index.js"></script>
+  <script type="text/babel">
+
+    const slides = [
+      'https://upload.wikimedia.org/wikipedia/commons/b/b1/34-Moneda-extranjera-ahorro-fuerte-740x400.jpg',
+      'https://mumsdotravel.com/wp-content/uploads/2015/07/Inntel-hotel-Zaandam-Holland.-Image-courtesy-of-Inntel.-740x400.jpeg',
+      'http://mongoliagrowthgroup.com/wp/wp-content/uploads/sub_mongrowth-740x400.jpg',
+      'http://www.albdreams.net/wp-content/uploads/2017/05/DSC_0443-740x400.jpg'
+    ];
+
+    ReactDOM.render(
+      <ReactiveSlider slides={slides} />,
+      document.getElementById('root')
+    );
+  </script>
+</body>
+</html>

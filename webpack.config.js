@@ -9,6 +9,23 @@ module.exports = {
   module: {
     rules: [
       {
+        oneOf: [
+          {
+            test: /\.css$/,
+            use: [
+              require.resolve('style-loader'),
+              {
+                loader: require.resolve('css-loader'),
+                options: {
+                  importLoaders: 1,
+                },
+              }
+            ],
+          }
+        ]
+      },
+
+      {
         test: /\.js$/,
         include: path.resolve(__dirname, 'src'),
         exclude: /(node_modules|build)/,
