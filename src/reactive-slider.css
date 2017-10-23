@@ -1,9 +1,9 @@
-#reactive-slider-container {
+.reactive-slider-container {
   margin: auto;
   width: 100%;
 }
 
-#reactive-slider {
+.reactive-slider {
   border: 1px solid black;
   margin: auto;
   width: 740px;

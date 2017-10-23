@@ -7,6 +7,25 @@
     <title>Reactive Slider Demo App</title>
 </head>
 <body>
-    
+    <div id="reactive-slider-demo-app"></div>
+
+    <script crossorigin src="https://unpkg.com/react@16.0.0/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16.0.0/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script src="../build/bundle.js"></script>
+    <script type="text/jsx">
+        const ReactiveSlider = ReactiveSlider.default;
+        const slides = [
+          'https://upload.wikimedia.org/wikipedia/commons/b/b1/34-Moneda-extranjera-ahorro-fuerte-740x400.jpg',
+          'https://mumsdotravel.com/wp-content/uploads/2015/07/Inntel-hotel-Zaandam-Holland.-Image-courtesy-of-Inntel.-740x400.jpeg',
+          'http://mongoliagrowthgroup.com/wp/wp-content/uploads/sub_mongrowth-740x400.jpg',
+          'http://www.albdreams.net/wp-content/uploads/2017/05/DSC_0443-740x400.jpg'
+        ];
+
+        ReactDOM.render(
+          <ReactiveSlider slides={slides}/>,
+          document.getElementById('reactive-slider-demo-app')
+        );
+    </script>
 </body>
 </html>

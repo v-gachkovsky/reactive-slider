@@ -1,32 +1,36 @@
 # Reactive Slider
 Reactive Slider is slider component for React
 
-## How to use
+## How to Example start
 
-You can use slider in your React App:
+Install dependencies:
+```
+npm install
+```
+Make build:
+```
+npm run build
+```
+Go to `example` folder and open `index.html` in browser
+
+You can use slider in your App:
 
 ```
-render() {
-    return (
-      <ReactiveSlider
-        slides={this.state.slides}
-      />
-    );
-  }
+ReactDOM.render(
+  <ReactiveSlider slides={slides}/>,
+  document.getElementById('some-div-id')
+);
 ```
 
-`this.state.slides` contains array of images
+`slides` contains array of images URLs   
 Also you can use `timeToShow` prop which takes a number of seconds:
 
 ```
-render() {
-    return (
-      <ReactiveSlider
-        slides={this.state.slides}
-        timeToShow={5}
-      />
-    );
-  }
-```
+ReactDOM.render(
+  <ReactiveSlider slides={slides} timeToShow={5}/>,
+  document.getElementById('some-div-id')
+);
+```  
 Each slide will be shown 5 seconds
-Default value is 3 seconds
+Default value is 3 seconds  
+See `example/index.html`
